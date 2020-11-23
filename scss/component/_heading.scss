@@ -1,0 +1,26 @@
+.head-with-border{
+    position: relative;
+    h2{
+        background-color: $mainColor ;
+        text-align: center;
+        color: #fff;
+        margin: 40px auto;
+        border-radius: 15px;
+        width: 400px;
+        padding: 10px 15px;
+        @media #{$maxMobile} {
+            width: 300px;
+            
+        }
+        &::before{
+            content: '';
+            width: 100%;
+            position: absolute;
+            background-color: $grayColor;
+            height: 1.5px;
+            z-index: -1;
+            top: 50%;
+            left: 0;
+        }
+    }
+}
